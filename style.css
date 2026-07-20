@@ -55,8 +55,10 @@ hr{
 /*CHAPTER-NAVIGATION*/
 .chapter-nav{
     display:flex;
-    justify-content:center;
-    gap:70px;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 80px;
+    width: 100%;
 }
 .chapter-nav a{
     color:#666666;
@@ -85,13 +87,15 @@ hr{
     flex-shrink:0;
 }
 .ascii pre{
-    font-family: Consolas, "Lucida Console", Monaco, monospace;
-    font-size:9px;  
-    line-height:0.85;
-    font-weight:700; 
-    color:#555;
     margin:0;
+    font-family: "Consolas", "Lucida Console", monospace;
+    font-size:23px;      /* Increase from 12px */
+    font-weight:900;     /* Maximum bold */
+    line-height:0.9;
+    color:#444;
     white-space:pre;
+    user-select:none;
+    cursor:pointer;
 }
 
 /*POSTS CONTAINER*/
@@ -154,3 +158,4 @@ footer a:hover{
 .chapter a:hover{
     color:#222;
 }
+
