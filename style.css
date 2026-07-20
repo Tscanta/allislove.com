@@ -15,6 +15,11 @@ body{
     margin:70px auto;
 }
 
+.scramble{
+    cursor: default;
+    user-select: none;
+}
+
 h1{
     text-align:center;
     font-family:Arial, Helvetica, sans-serif;
@@ -47,21 +52,21 @@ hr{
     padding:25px;
 }
 
-.chapter{
+/*CHAPTER-NAVIGATION*/
+.chapter-nav{
     display:flex;
     justify-content:center;
-    gap:60px;
-    margin:12px 0;
+    gap:70px;
 }
+.chapter-nav a{
+    color:#666666;
+    font-size:30px;
+    text-decoration:none;
 
-.chapter a{
-    color:#666;
-    font-size:18px;
+    transition:.2s;
 }
-
-.chapter span{
-    color:blue;
-    font-size:15px;
+.chapter-nav a:hover{
+    color:#111;
 }
 
 .updates{

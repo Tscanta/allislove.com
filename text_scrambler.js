@@ -1,44 +1,40 @@
-//TEXT SCRAMBLE EFFECT
-const title = document.getElementById("title");
-const originalText = title.textContent;
+const symbols = "!@#$%^&*<>?/[]{}+=-_~";
 
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+const lines = document.querySelectorAll(".scramble");
 
-let interval = null;
+lines.forEach(line => {
 
-title.addEventListener("mouseenter", () => {
+    const original = line.textContent;
+    let interval = null;
 
-    let iteration = 0;
+    line.addEventListener("mouseenter", () => {
+        clearInterval(interval);
+        interval = setInterval(() => {
 
-    clearInterval(interval);
+            const chars = original.split("");
+            const changes = Math.floor(Math.random() * 2) + 2;
 
-    interval = setInterval(() => {
+            for (let i = 0; i < changes; i++) {
 
-        title.textContent = originalText
-            .split("")
-            .map((letter, index) => {
+                const index = Math.floor(Math.random() * chars.length);
 
-                if (letter === " ") return " ";
+                if (chars[index] !== " ") {
 
-                if (index < iteration) {
-                    return originalText[index];
+                    chars[index] =
+                        symbols[Math.floor(Math.random() * symbols.length)];
+
                 }
 
-                return letters[Math.floor(Math.random() * letters.length)];
-            })
-            .join("");
+            }
 
-        if (iteration >= originalText.length) {
-            clearInterval(interval);
-        }
+            line.textContent = chars.join("");
+        }, 130);
+    });
 
-        iteration += 1 / 3;
+    line.addEventListener("mouseleave", () => {
+        clearInterval(interval);
+        line.textContent = original;
 
-    }, 30);
+    });
 
-});
-
-title.addEventListener("mouseleave", () => {
-    clearInterval(interval);
-    title.textContent = originalText;
 });
