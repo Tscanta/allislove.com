@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#e2e2e2;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#222;
+}
+
+.container{
+    width:720px;
+    margin:70px auto;
+}
+
+h1{
+    text-align:center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:60px;
+    font-weight:400;
+    letter-spacing:-2px;
+    color:#222;
+}
+
+hr{
+    width:280px;
+    margin:25px auto;
+    border:none;
+    border-top:1px dashed #999;
+}
+
+.intro{
+    text-align:center;
+    color:#444;
+    line-height:1.8;
+    font-size:18px;
+}
+
+.box{
+    background:#f3f3f3;
+    border:1px solid #cfcfcf;
+    border-radius:3px;
+    width:100%;
+    margin:35px auto;
+    padding:25px;
+}
+
+.chapter{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    margin:12px 0;
+}
+
+.chapter a{
+    color:#666;
+    font-size:18px;
+}
+
+.chapter span{
+    color:blue;
+    font-size:15px;
+}
+
+.updates{
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+
+/*ASCII*/
+.ascii{
+    width:240px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    flex-shrink:0;
+}
+.ascii pre{
+    font-family: Consolas, "Lucida Console", Monaco, monospace;
+    font-size:9px;  
+    line-height:0.85;
+    font-weight:700; 
+    color:#555;
+    margin:0;
+    white-space:pre;
+}
+
+/*POSTS CONTAINER*/
+.posts{
+    flex:1;
+    background:#e7e7e7;
+    border:1px solid #d0d0d0;
+    padding:18px;
+}
+
+/*INDIVIDUAL POSTS*/
+.post{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:18px;
+}
+.post:last-child{
+    margin-bottom:0;
+}
+.post span{
+    color:blue;
+}
+
+.post small{
+    color:#666;
+}
+
+/*FOOTER*/
+footer{
+    margin-top:60px;
+    text-align:center;
+}
+footer a{
+    color:#4b5cff;
+    text-decoration:none;
+}
+footer a:hover{
+    text-decoration:underline;
+}
+
+.box-updates{
+    background:#f3f3f3;
+    border:1px solid #bbb;
+    width:100%;
+    margin:35px auto;
+    padding:18px;
+
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.chapter a{
+    color:#666;
+    text-decoration:underline;
+    transition:color 0.2s ease;
+}
+
+.chapter a:hover{
+    color:#222;
+}
