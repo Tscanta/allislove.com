@@ -166,6 +166,35 @@ footer a:hover {
     color:#222;
 }
 
+/* STARS CURSOR TRAIL */
+#stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:9999;
+}
+.star{
+    position:absolute;
+    color:white;
+    font-size:10px;
+    text-shadow:
+        0 0 6px white,
+        0 0 12px white;
+    animation:fall 1.4s ease-out forwards;
+}
+
+@keyframes fall{
+    0%{
+        transform:translate(0,0) scale(1);
+        opacity:1;
+    }
+    100%{
+        transform:translate(var(--x),40px) scale(0);
+        opacity:0;
+    }
+}
+
 
 /* ===========================
    FOR Mobile

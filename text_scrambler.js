@@ -1,4 +1,4 @@
-const symbols = "!@#$%^&*<>?/[]{}+=-_~";
+const scrambleSymbols = "!@#$%^&*<>?/[]{}+=-_~";
 
 const lines = document.querySelectorAll(".scramble");
 
@@ -20,8 +20,8 @@ lines.forEach(line => {
 
                 if (chars[index] !== " ") {
 
-                    chars[index] =
-                        symbols[Math.floor(Math.random() * symbols.length)];
+                chars[index] =
+                        scrambleSymbols[Math.floor(Math.random() * scrambleSymbols.length)];
 
                 }
 
