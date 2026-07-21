@@ -201,27 +201,61 @@ footer a:hover {
 =========================== */
 
 @media (max-width: 768px) {
-    body {
-        padding: 20px;
+    body{
+        padding:20px;
     }
 
-    .container {
-        width: 100%;
-        max-width: 100%;
+    .container{
+        width:100%;
+        margin:30px auto;
     }
 
-    h1,h2 {
-        font-size: 1.5rem;
-        text-align: center;
+    /* Intro */
+    .intro{
+        font-size:15px;
+        line-height:1.7;
     }
 
-    p {
-        font-size: 15px;
-        line-height: 1.7;
+    /* Chapters */
+    .chapter-nav{
+        padding:0;
+    }
+    .chapter-nav a{
+        font-size:26px;
     }
 
-    footer {
-        flex-direction: column;
-        gap: 12px;
+    /* Updates */
+    .box-updates{
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+        padding:20px;
+    }
+
+    /* Ascii Kitty */
+    .ascii{
+        width:100%;
+        justify-content:center;
+    }
+    .ascii pre{
+        font-size:18px;
+    }
+
+    /* Posts */
+    .posts{
+        width:100%;
+    }
+    .post{
+        flex-direction:column;
+        gap:6px;
+    }
+    .post span{
+        font-size:13px;
+    }
+
+    /* Footer */
+    footer{
+        flex-direction:column;
+        gap:12px;
     }
 }
