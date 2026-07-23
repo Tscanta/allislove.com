@@ -259,3 +259,171 @@ footer a:hover {
         gap:12px;
     }
 }
+
+/* ===========================
+   Birthday Event
+=========================== */
+
+#birthday-overlay{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(3px);
+    z-index:9999;
+}
+
+#birthday-gift{
+    position:relative;
+    width:140px;
+    height:140px;
+    cursor:pointer;
+}
+
+/* Box */
+.gift-box{
+    position:absolute;
+    bottom:0;
+    width:140px;
+    height:100px;
+    background:#efe2c4;
+    border:2px solid #222;
+    overflow:hidden;
+}
+
+/* Lid */
+.gift-lid{
+    position:absolute;
+    top:0;
+    width:150px;
+    height:35px;
+    left:-5px;
+    background:#efe2c4;
+    border:2px solid #222;
+    z-index:2;
+    transform-origin:left center;
+    transition:.7s ease;
+}
+
+/* Vertical ribbon */
+
+.ribbon-v{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:18px;
+    height:100%;
+    background:#b64848;
+}
+
+/* Horizontal ribbon */
+
+.ribbon-h{
+    position:absolute;
+    top:20px;
+    width:100%;
+    height:18px;
+    background:#b64848;
+}
+
+#birthday-text{
+    position:absolute;
+    left:50%;
+    top:calc(50% - 110px);
+    transform:translate(-50%, -20px);
+    opacity:0;
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+    color:white;
+    font-size:48px;
+    text-align:center;
+    pointer-events:none;
+}
+
+.gift-box{
+    position:absolute;
+    bottom:0;
+    width:140px;
+    height:100px;
+    background:#efe2c4;
+    border:2px solid #222;
+    overflow:visible;   /* ← change from hidden */
+}
+
+.gift-glow{
+    position:absolute;
+    width:40px;
+    height:40px;
+    left:50%;
+    top:45%;
+    transform:translate(-50%,-50%) scale(0);
+    border-radius:50%;
+    background:white;
+    filter:blur(15px);
+    opacity:0;
+    transition:.4s;
+}
+
+/* Animations for the gift-box */
+@keyframes giftDrop{
+    0%{
+        transform:translateY(-120vh) scale(.8);
+        opacity:0;
+    }
+    70%{
+        transform:translateY(20px) scale(1.05);
+        opacity:1;
+    }
+    85%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@keyframes giftFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+@keyframes lidOpen{
+    0%{
+        transform:rotate(0deg) translate(0,0);
+    }
+    60%{
+        transform:
+            rotate(-35deg)
+            translate(-20px,-40px);
+    }
+    100%{
+        transform:
+            rotate(-55deg)
+            translate(-45px,-80px);
+        opacity:0;
+    }
+}
+
+@keyframes giftSquish{
+    0%{
+        transform:scale(1);
+    }
+    35%{
+        transform:scaleX(1.08) scaleY(.92);
+    }
+    60%{
+        transform:scaleX(.95) scaleY(1.05);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+

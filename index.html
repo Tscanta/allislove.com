@@ -1,84 +1,108 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>allislove</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="container">
-            <hr>
-            
-            <!--HERO SECTION-->
-            <div class="intro">
-                <p class="scramble">for my most precious anticipated future,</p>
-                <p class="scramble">for the best of me and the best of us,</p>
-                <p class="scramble">my digital archive for what you feel for me,</p>
-                <p class="scramble">my digital archive for my stratified id.</p>
-            </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>allislove</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-            <hr>
+<body>
 
-            <!--CHAPTERS-->
-            <div class="box">
+    <div class="container">
 
+        <hr>
+
+        <!-- HERO SECTION -->
+        <div class="intro">
+            <p class="scramble">for my most precious anticipated future,</p>
+            <p class="scramble">for the best of me and the best of us,</p>
+            <p class="scramble">my digital archive for what you feel for me,</p>
+            <p class="scramble">my digital archive for my stratified id.</p>
+        </div>
+
+        <hr>
+
+        <!-- CHAPTERS -->
+        <div class="box">
             <div class="chapter-nav">
                 <a href="chapter1.html">i.</a>
-                <a href="chapter2.html">ii.</a> 
+                <a href="chapter2.html">ii.</a>
                 <a href="chapter3.html">iii.</a>
             </div>
         </div>
-            
-            <!--UPDATES-->
-            <div class="box-updates">
 
-                <div class="ascii">
+        <!-- UPDATES -->
+        <div class="box-updates">
 
-            <!--ASCII CAT-->
+            <!-- ASCII CAT -->
             <div class="ascii">
                 <pre id="cat"></pre>
             </div>
 
+            <!-- POSTS -->
+            <div class="posts">
+
+                <div class="post">
+                    <div>
+                        <strong>- meow</strong><br>
+                        <small>intro, personal</small>
+                    </div>
+                    <span>2024-06-01</span>
                 </div>
 
-                <div class="posts">
-
-                    <!--POST 1-->
-                    <div class="post">
-                        <div>
-                            <strong>- meow</strong><br>
-                            <small>intro, personal</small>
-                        </div>
-                        <span>2024-06-01</span>
+                <div class="post">
+                    <div>
+                        <strong>- meow2</strong><br>
+                        <small>update</small>
                     </div>
-                    
-                    <!--POST 2-->
-                    <div class="post">
-                        <div>
-                            <strong>- meow2</strong><br>
-                            <small>update</small>
-                        </div>
-                        <span>2024-06-01</span>
-                    </div>
+                    <span>2024-06-01</span>
                 </div>
+
             </div>
+        </div>
 
-            <!--FOOTER-->
-            <footer>
-                <a href="https://www.last.fm/user/harpikarp">lastfm</a>
-                <a href="#">@littlebishop</a>
-                <a href="#">email</a>
-            </footer>
+        <!-- FOOTER -->
+        <footer>
+            <a href="https://www.last.fm/user/harpikarp">lastfm</a>
+            <a href="#">@littlebishop</a>
+            <a href="#">email</a>
+        </footer>
+
+    </div>
+
+    <!-- STAR TRAIL -->
+    <div id="stars"></div>
+
+    <!-- BIRTHDAY OVERLAY -->
+    <div id="birthday-overlay">
+
+        <div id="birthday-gift">
+
+            <div class="gift-lid"></div>
+
+            <div class="gift-box">
+                <div class="gift-glow"></div>
+                <div class="ribbon-v"></div>
+                <div class="ribbon-h"></div>
+            </div>
 
         </div>
 
-    <div id="stars"></div>
-    
+        <h1 id="birthday-text">
+            Happy Birthday!!
+        </h1>
+
+    </div>
+
+    <!-- SCRIPTS -->
+     <script src="birthday.js"></script>
+     <script src="asciicat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
     <script src="star_trail.js"></script>
     <script src="text_scrambler.js"></script>
-    <script src="asciicat.js"></script>
     
     
-    </body>
-</html> 
+
+</body>
+</html>

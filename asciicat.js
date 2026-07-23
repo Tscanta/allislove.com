@@ -1,7 +1,12 @@
 const cat = document.getElementById("cat");
+const today = new Date();
+
+const isBirthday =
+    today.getMonth() === 6 &&
+    today.getDate() === 23;
+
 
 /* ---------------- Sleeping ---------------- */
-
 const sleepingFrames = [
 ` /\\_/\\\\
 ( -.- ) z
@@ -104,8 +109,35 @@ wave: [
 ` /\\_/\\\\
 ( -.- )
  > ^ <`
-]
+],
 
+birthdayDance: [
+
+`      /\\
+     /__\\
+    /\\_/\\\\
+ ♪ ( ^▽^ )
+    > ^ <`,
+
+`       /\\
+      /__\\
+    /\\_/\\\\
+  ( ^▽^ ) ♪
+    < ^ >`,
+
+`      /\\
+     /__\\
+    /\\_/\\\\
+ ♫ ( ^▽^ )
+    > ^ <`,
+
+`       /\\
+      /__\\
+    /\\_/\\\\
+  ( ^▽^ ) ♫
+    < ^ >`
+
+]
 };
 
 /* ---------------- Variables ---------------- */
@@ -117,6 +149,9 @@ let busy = false;
 
 /* ---------------- Sleeping ---------------- */
 
+if(isBirthday){
+    cat.textContent = animations.birthdayDance[0];
+}
 function startSleeping(){
 
     clearInterval(animationInterval);
@@ -124,12 +159,19 @@ function startSleeping(){
 
     let frame = 0;
 
-    sleepingInterval = setInterval(() => {
+    // 🎉 Birthday mode
+    if(isBirthday){
+        sleepingInterval = setInterval(()=>{
+            cat.textContent = animations.birthdayDance[frame];
+            frame = (frame + 1) % animations.birthdayDance.length;
+        },350);
+        return;
+    }
 
+    // 😴 Normal sleeping mode
+    sleepingInterval = setInterval(()=>{
         cat.textContent = sleepingFrames[frame];
-
         frame = (frame + 1) % sleepingFrames.length;
-
     },760);
 
 }
